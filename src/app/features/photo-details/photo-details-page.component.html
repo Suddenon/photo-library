@@ -1,0 +1,6 @@
+@if (photo(); as photo) {
+    <div class="details">
+        <img class="details__image" [src]="photo.url" alt="Photo" />
+        <button class="details__remove-btn" (click)="onRemove()">Remove from favorites</button>
+    </div>
+}

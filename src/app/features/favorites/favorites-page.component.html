@@ -1,0 +1,11 @@
+@if (favorites().length === 0) {
+    <p class="empty">No favorites yet</p>
+}
+
+<div class="grid">
+    @for (photo of favorites(); track photo.id) {
+        <div class="grid__item" (click)="onPhotoClick(photo.id)">
+            <img class="grid__image" [src]="photo.url" alt="Photo" />
+        </div>
+    }
+</div>

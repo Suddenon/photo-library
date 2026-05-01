@@ -1,0 +1,49 @@
+@use '../../shared/styles/mixins' as *;
+
+.grid {
+    @include photo-grid;
+
+    &__badge {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #ff5252;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+
+        mat-icon {
+            font-size: 16px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.scroll-sentinel {
+    height: 1px;
+}
+
+.loader {
+    width: 100%;
+
+    &--center {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    &--inline {
+        display: flex;
+        justify-content: center;
+        padding-top: 16px;
+    }
+}
