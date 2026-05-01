@@ -1,0 +1,16 @@
+.card {
+    position: relative;
+    cursor: pointer;
+
+    &__image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.2s ease;
+
+        .card:hover & {
+            transform: scale(1.03);
+        }
+    }
+}

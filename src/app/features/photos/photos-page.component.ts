@@ -11,16 +11,16 @@ import {
 } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { MatIconModule } from '@angular/material/icon';
 import { IPhoto } from '../../core/models/photo.model';
 import { FavoritesService } from '../../core/services/favorites.service';
 import { PhotoApiService } from '../../core/services/photo-api.service';
+import { PhotoCardComponent } from '../../shared/components/photo-card/photo-card.component';
 
 const PAGE_SIZE = 9;
 
 @Component({
     selector: 'app-photos-page',
-    imports: [MatProgressSpinnerModule, MatIconModule],
+    imports: [MatProgressSpinnerModule, PhotoCardComponent],
     templateUrl: './photos-page.component.html',
     styleUrl: './photos-page.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

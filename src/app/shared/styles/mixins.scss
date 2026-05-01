@@ -2,21 +2,4 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-
-    &__item {
-        position: relative;
-        cursor: pointer;
-    }
-
-    &__image {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        border-radius: 8px;
-        transition: transform 0.2s ease;
-
-        .grid__item:hover & {
-            transform: scale(1.03);
-        }
-    }
 }

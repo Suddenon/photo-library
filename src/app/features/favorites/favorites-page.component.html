@@ -4,8 +4,6 @@
 
 <div class="grid">
     @for (photo of favorites(); track photo.id) {
-        <div class="grid__item" (click)="onPhotoClick(photo.id)">
-            <img class="grid__image" [src]="photo.url" alt="Photo" />
-        </div>
+        <app-photo-card [photo]="photo" (photoClick)="onPhotoClick($event)" />
     }
 </div>

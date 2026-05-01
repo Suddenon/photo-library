@@ -36,7 +36,6 @@ describe('PhotosPageComponent', () => {
         favoritesServiceMock = {
             favorites: signal<IPhoto[]>([]).asReadonly(),
             addToFavorites: vi.fn(),
-            isInFavorites: vi.fn().mockReturnValue(false),
         };
 
         await TestBed.configureTestingModule({

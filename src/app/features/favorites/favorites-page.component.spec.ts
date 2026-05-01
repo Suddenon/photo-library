@@ -47,7 +47,7 @@ describe('FavoritesPageComponent', () => {
     });
 
     it('should navigate to photo details on click', () => {
-        component.onPhotoClick('1');
+        component.onPhotoClick(mockPhotos[0]);
         expect(routerMock.navigate).toHaveBeenCalledWith(['/photos', '1']);
     });
 
